@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mini LinkedIn</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="auth-container">
+    <h2>Login / Register</h2>
+    <input type="email" id="email" placeholder="Email">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="register()">Register</button>
+    <button onclick="login()">Login</button>
+    <p id="auth-error" class="error"></p>
+  </div>
+
+  <div id="app-container" class="hidden">
+    <div class="navbar">
+      <span id="user-email"></span>
+      <button onclick="logout()">Logout</button>
+    </div>
+
+    <div class="profile-section">
+      <h2>Your Profile</h2>
+      <input type="text" id="name" placeholder="Name">
+      <input type="text" id="bio" placeholder="Bio">
+      <button onclick="updateProfile()">Update Profile</button>
+    </div>
+
+    <div class="post-section">
+      <h2>Create Post</h2>
+      <textarea id="post-content" placeholder="What's on your mind?"></textarea>
+      <button onclick="createPost()">Post</button>
+    </div>
+
+    <div class="feed-section">
+      <h2>Public Feed</h2>
+      <div id="feed"></div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
